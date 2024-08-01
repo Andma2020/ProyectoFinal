@@ -4,12 +4,9 @@
   left: 0 #{"/* rtl:ignore */"};
   z-index: $zindex-popover;
   display: block;
-  max-width: $popover-max-width;
-  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
-  // So reset our font and text properties to avoid inheriting weird values.
+  max-width: $popover-max-width; 
   @include reset-text();
   @include font-size($popover-font-size);
-  // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: $popover-bg;
   background-clip: padding-box;
@@ -140,7 +137,7 @@
 // Offset the popover to account for the popover arrow
 .popover-header {
   padding: $popover-header-padding-y $popover-header-padding-x;
-  margin-bottom: 0; // Reset the default from Reboot
+  margin-bottom: 0; 
   @include font-size($font-size-base);
   color: $popover-header-color;
   background-color: $popover-header-bg;
